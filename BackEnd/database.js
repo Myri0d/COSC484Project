@@ -36,7 +36,7 @@ function storePayment(){
     }
     MongoClient.connect(url, function(err,db){
         if (err) throw err;
-        dbTest.collection("customers").insert(paymentInfo, function(err,res){
+        dbTest.collection("users").insert(paymentInfo, function(err,res){
             if (err) throw err;
             
             
