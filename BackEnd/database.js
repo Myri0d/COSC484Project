@@ -1,5 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:3000/";
+var url = "mongodb://localhost:27017/";
 
 MongoClient.connect(url, function(err,db){
     if (err) throw err;
@@ -21,7 +21,6 @@ function storePayment(){
     var cardNum = document.getElementById('cNumb');
     var expDate = document.getElementById('eDate');
     var cvv = document.getElementById('cvv');
-
     var paymentInfo = {
         Firstname: fname,
         LastName: lname,
@@ -34,14 +33,20 @@ function storePayment(){
         ExpDate: expDate,
         CVV: cvv
     }
+    alert("Your Payment has been processed");
     MongoClient.connect(url, function(err,db){
-        if (err) throw err;
-        dbTest.collection("users").insert(paymentInfo, function(err,res){
+        
+        var dbProject = db.db("projectDB");
+        if (err){
+            alert("Unable to process payment");
+            return false;
+        }
+        dbProject.collection("users").insert(paymentInfo, function(err,res){
             if (err) throw err;
-            
-            
+            alert("inserted");
         });
     });
     alert("Your Payment has been processed");
     return true;
 }
+
