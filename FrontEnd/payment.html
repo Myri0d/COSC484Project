@@ -5,7 +5,7 @@
   <title>Payment</title>
    <link rel="stylesheet" href="bootstrap.css">
   <link rel="icon" href="images/doc.jpg">
-  <script type="text/javascript" src="BackEnd/database.js"></script>
+  <script type="text/javascript" src="../BackEnd/database.js"></script>
 </head>
 
 <body>
@@ -45,11 +45,11 @@
     </div>
 </nav>
     <div style="background-position: center; width: max-content;
-    background-repeat: no-repeat; background-position: center;">
-        <img src='images/dabitCredit.PNG'>
- <form id="submitform" class = "formContainer"action="index.html" method="GET" onsubmit="return storePayment()">
-    <fieldset id = "blockBorder" >
-
+    background-repeat: no-repeat; background-position: center;"> 
+        <img src='images/dabitCredit.PNG'>  
+ <form id="PayForm" class = "formContainer"action="index.html" method="GET" onsubmit="return storePayment();">
+    <fieldset id = "blockBorder" > 
+         
             <h3>Billing Adress</h3>
             First Name <br>
              <input type="text"  name="fname" id = "fname" required><br>
