@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maintenance Request</title>
+	<link rel="stylesheet" type="text/css" href="css/maint.css">
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="icon" href="images/doc.jpg">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+			<div class="container-fluid">
+					<a class="navbar-brand" href="#"><img src ="images/logo.png" style="height: 100px;"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						 <span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+							<ul class="navbar-nav ml-auto">
+									<li class="nav-item">
+											<a class="nav-link" href="Index.html">Home</a>
+									</li>
+									<li class="nav-item">
+													<a class="nav-link" href="about.html">About</a>
+									</li>
+									<li class="nav-item active dropdown">
+													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															Services
+													</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+																	 <a class="dropdown-item" href="#">Maintenence Request</a>
+																	 <a class="dropdown-item" href="payment.html">Pay Bills</a>
+
+													</div>
+									</li>
+									<li class="nav-item">
+													<a class="nav-link" href="contact.html">Contact</a>
+									</li>
+									<li class="nav-item">
+													<a class="nav-link" href="login.html">Login</a>
+									</li>
+							</ul>
+					</div>
+			</div>
+	</nav>
+	<h1>Maintenance Request</h1><br>
+	<div class="register">
+		<center><h2>Fill in your information here:</h2></center>
+		<form id="submitform" class = "formContainer"action="index.html" method="GET" onsubmit="">
+			<label>First Name: </label><br>
+			<input type="text" name="Fname" id="name" placeholder="Enter First Name" required><br><br>
+			<label>Last Name: </label><br>
+			<input type="text" name="Lname" id="name" placeholder="Enter Last Name" required><br><br>
+			<label>Phone Number: </label><br>
+			<select id="ph">
+				<option>91</option>
+				<option>92</option>
+				<option>93</option>
+				<option>94</option>
+				<option>95</option>
+			</select>
+			<input type="number" name="MNum" id="num" placeholder="Enter phone number" required><br><br>
+			<label>Email: </label><br>
+			<input type="Email" name="email" id="name" placeholder="Enter email" required><br><br>
+			<label>Password: </label><br>
+			<input type="Password" name="pass" id="name" placeholder="Enter password" required><br><br>
+			<label>reEnter Password: </label><br>
+			<input type="Password" name="pass" id="name" placeholder="Enter password" required><br><br>
+			<input type="submit" name="submit" id="sub">
+		</form>
+	</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</html>

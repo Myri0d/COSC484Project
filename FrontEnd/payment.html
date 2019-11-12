@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-
   <title>Payment</title>
    <link rel="stylesheet" href="bootstrap.css">
   <link rel="icon" href="images/doc.jpg">
@@ -12,14 +11,14 @@
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src ="logo.png" style="height: 100px;"></a>
+        <a class="navbar-brand" href="#"><img src ="images/logo.png" style="height: 100px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="Index.html">Home</a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -30,13 +29,13 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                 <a class="dropdown-item" href="#">Maintenence Request</a>
+                                 <a class="dropdown-item" href="maint.html">Maintenence Request</a>
                                  <a class="dropdown-item" href="payment.html">Pay Bills</a>
 
                         </div>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
@@ -46,11 +45,11 @@
     </div>
 </nav>
     <div style="background-position: center; width: max-content;
-    background-repeat: no-repeat; background-position: center;"> 
-        <img src='images/dabitCredit.PNG'>  
+    background-repeat: no-repeat; background-position: center;">
+        <img src='images/dabitCredit.PNG'>
  <form id="submitform" class = "formContainer"action="index.html" method="GET" onsubmit="return storePayment()">
-    <fieldset id = "blockBorder" > 
-         
+    <fieldset id = "blockBorder" >
+
             <h3>Billing Adress</h3>
             First Name <br>
              <input type="text"  name="fname" id = "fname" required><br>
@@ -117,12 +116,12 @@
               </select>
 
           </fieldset>
-          
-   
+
+
           <fieldset>
-           <h3>Payment</h3> 
+           <h3>Payment</h3>
            Card Type <br>
-            <input type="radio" id="Card" name="payment" value="Visa" checked>Visa 
+            <input type="radio" id="Card" name="payment" value="Visa" checked>Visa
             <input type="radio" id="Card" name="payment" value="Discover"> Discover
             <input type="radio" id="Card" name="payment" value="Master Card"> Master Card
             <input type="radio" id="Card" name="payment" value="American Express"> American Express<br>
@@ -130,8 +129,8 @@
              <input type="number" id="cNumb" required >
             <p>Exp. Date <br>
             <input type="date" id="eDate" name="expDate"
-              min="2018-03" value="2030-05"> </p> 
-            Cvv <br> 
+              min="2018-03" value="2030-05"> </p>
+            Cvv <br>
             <input type="number" id = "cvv" required >
           </fieldset>
           <fieldset >
