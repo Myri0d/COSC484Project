@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  
+
   <title>Payment</title>
    <link rel="stylesheet" href="bootstrap.css">
   <link rel="icon" href="images/doc.jpg">
@@ -11,7 +11,7 @@
 <body class="backImage">
         <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img src ="logo.png" style="height: 100px;"></a>
+                  <a class="navbar-brand" href="#"><img src ="images/logo.png" style="height: 100px;"></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -23,22 +23,33 @@
                         <li class="nav-item">
                           <a class="nav-link" href="about.html">About</a>
                         </li>
+                        <li class="nav-item active dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Services
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                         <a class="dropdown-item" href="#">Maintenence Request</a>
+                                         <a class="dropdown-item" href="#">Pay Bills</a>
+
+                                </div>
+                        </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                           </li>
-                          <li class="nav-item active">
+                          <li class="nav-item">
                             <a class="nav-link" href="login.html"></a>
                           </li>
                         </ul>
                       </div>
                     </div>
                 </nav>
-    <div> 
-    <div style="background-position: center;" style="width: max-content;"> 
-        <img src='images/dabitCredit.PNG'>  
+    <div>
+    <div style="background-position: center;" style="width: max-content;">
+        <img src='images/dabitCredit.PNG'>
  <form id="submitform" action="#" method="#">
-    <fieldset id = "blockBorder" style="text-align: center;"> 
-         
+    <fieldset id = "blockBorder" style="text-align: center;">
+
             <h3>Billing Adress</h3>
             First Name: <input type="text"  name="fname" id = "fname" placeholder="First name" required><br>
             Last Name: <input type="text"name="lname" id = "lname" placeholder="Last name" required> <br>
@@ -98,20 +109,20 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
-              
+
           </fieldset>
-          
-   
+
+
           <fieldset style="text-align: center;">
-           <h3>payment</h3> 
-            <input type="radio" name="payment" value="Visa" checked>Visa 
+           <h3>payment</h3>
+            <input type="radio" name="payment" value="Visa" checked>Visa
             <input type="radio" name="payment" value="Discover"> Discover
             <input type="radio" name="payment" value="Master Card"> Master Card
             <input type="radio" name="payment" value="American Express"> American Express<br>
              Card#:<input type="number" required >
-            <p> Exp. Date 
+            <p> Exp. Date
             <input type="date" id="start" name="start"
-              min="2018-03" value="2030-05"> :</p> 
+              min="2018-03" value="2030-05"> :</p>
             Cvv:<input type="number" required >
           </fieldset>
           <fieldset style="text-align: center;">
@@ -122,4 +133,7 @@
     </div>
 
   </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </html>
