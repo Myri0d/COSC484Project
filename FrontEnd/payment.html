@@ -8,7 +8,7 @@
   <script type="text/javascript" src="../BackEnd/database.js"></script>
 </head>
 
-<body>
+<body style="background-size: cover; background-repeat: no-repeat; background-image: url('images/apartment_background.jpg');">
   <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src ="images/logo.png" style="height: 100px;"></a>
@@ -29,7 +29,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                 <a class="dropdown-item" href="maint.html">Maintenence Request</a>
+                                 <a class="dropdown-item" href="Maintenance_Page.html">Maintenence Request</a>
                                  <a class="dropdown-item" href="payment.html">Pay Bills</a>
 
                         </div>
@@ -44,12 +44,12 @@
         </div>
     </div>
 </nav>
-    <div style="background-position: center; width: max-content;
-    background-repeat: no-repeat; background-position: center;"> 
-        <img src='images/dabitCredit.PNG'>  
- <form id="PayForm" class = "formContainer"action="index.html" method="GET" onsubmit="return storePayment();">
+
+<h3 style="text-align: center;color: white;">Payment Info</h3> <br>
+
+    
+ <form id="PayForm" class = "register" action="index.html" method="GET" onsubmit="return storePayment();">
     <fieldset id = "blockBorder" > 
-         
             <h3>Billing Adress</h3>
             First Name <br>
              <input type="text"  name="fname" id = "fname" required><br>
@@ -137,7 +137,6 @@
             <input type="submit" value="Submit">
           </fieldset>
       </form>
-    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
