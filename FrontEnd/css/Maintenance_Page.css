@@ -10,7 +10,6 @@ h1{
 body{
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-image: url('pic.jpeg');
 }
 h2{
 	text-align: center;
@@ -58,7 +57,7 @@ label{
     outline: 0;
 }
 #sub{
-	margin-left: 50px; 
+	margin-left: 50px;
 	width: 200px;
     padding: 7px;
     font-size: 16px;
@@ -73,6 +72,3 @@ textarea{
 	width: 300px;
 	height: 100px;
 }
-
-
-
