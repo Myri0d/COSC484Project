@@ -13,7 +13,8 @@
   },
   
   "dependencies": {
-    "express":"*"
+    "express":"*",
+    "mongoose":"*"
   },
   "keywords": [
     "heroku",
