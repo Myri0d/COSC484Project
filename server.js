@@ -51,12 +51,7 @@ const users = [];
 const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/test?retryWrites=true&w=majority");
 const DATABASE_NAME = "projectdb";
 
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  database = client.db(DATABASE_NAME);
-  collection = database.collection("users");
-  client.close();
-});
+
 
 
 
@@ -128,7 +123,18 @@ app.get("/contact.html", checkAuth, function(req, res)
   res.sendFile(__dirname + "/contact.html");
 });
 
-app.listen(port)
+app.listen(port, () => {
+  const client = new MongoClient(uri, { useNewUrlParser: true });
+    client.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
+        if(error) {
+            throw error;
+        }
+
+            database = client.db(DATABASE_NAME);
+            collection = database.collection("users");
+            client.close();
+  });
+});
 
 //check if not registered; if not redirect to login
 function checkAuth(req, res, next){
