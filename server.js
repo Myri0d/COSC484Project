@@ -22,8 +22,8 @@ server.listen(8080);
 
 //libraries and files to use
 app.use(express.urlencoded({extended: false}));
-app.use('/images', express.static(path.join(__dirname, 'images')))
-app.use("/css",  express.static(path.join(__dirname, 'css')));
+app.use('/images', express.static(path.join(__dirname, 'FrontEnd','images')))
+app.use("/css",  express.static(path.join(__dirname, 'FrontEnd','css')));
 app.use(flash());
 app.use(session({
   secret: "bigolsecret",
