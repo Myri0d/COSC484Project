@@ -20,14 +20,14 @@ var app = require('express')();
 var server = require('http').Server(app);
 server.listen(8080);
 
+
 //libraries and files to use
 app.use(express.urlencoded({extended: false}));
 app.use('/images', express.static(path.join(__dirname, 'images')))
 app.use("/css",  express.static(path.join(__dirname, 'css')));
-app.use(express.cookieParser(12223334433445454));
 app.use(flash());
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  {secret: "bigOlSecret", name: "Cookie_name", cookie: {maxAge:7 * 24 * 3600 * 1000}, proxy: true, resave: true, saveUninitialized: true },
   resave: false,
   saveUninitialized: false
 }));
