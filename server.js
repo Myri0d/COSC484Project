@@ -131,7 +131,7 @@ app.listen(port, () => {
         }
 
             database = client.db(DATABASE_NAME);
-            const database.collection("users");
+            database.createCollection("payments");
             client.close();
   });
 });
