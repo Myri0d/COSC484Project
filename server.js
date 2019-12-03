@@ -131,13 +131,8 @@ app.listen(port, () => {
         }
 
             database = client.db(DATABASE_NAME);
-            database.createCollection("payments", function(err,res) {
-              if (err) {
-                throw err;
-              }
-              console.log("payment collection created")
-            });
-            
+            database.createCollection("users");
+            console.log("inside databse");
   });
 });
 
@@ -172,6 +167,3 @@ app.delete("/logout", (req, res) =>{
   res.redirect("login.html");
 }
 );
-
-
-
