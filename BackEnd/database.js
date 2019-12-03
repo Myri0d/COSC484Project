@@ -1,13 +1,14 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+//var url = "mongodb://localhost:27017/";
+var url = process.env.MONGOLAB_URI;
 
 MongoClient.connect(url, function(err,db){
     if (err) throw err;
-    var dbProject = db.db("projectDB");
-    dbProject.createCollection("users");
-    dbProject.createCollection("amenities");
-    dbProject.createCollection("Pay");
-    dbProject.createCollection("maintenence");
+  
+    db.createCollection("users");
+    db.createCollection("amenities");
+    db.createCollection("Pay");
+    db.createCollection("maintenence");
 });
 
 function storePayment(){
@@ -33,15 +34,15 @@ function storePayment(){
         ExpDate: expDate,
         CVV: cvv
     }
-    alert("Your Payment has been processed");
+    
     MongoClient.connect(url, function(err,db){
         
-        var dbProject = db.db("projectDB");
+        
         if (err){
             alert("Unable to process payment");
             return false;
         }
-        dbProject.collection("users").insert(paymentInfo, function(err,res){
+        db.collection("users").insert(paymentInfo, function(err,res){
             if (err) throw err;
             alert("inserted");
         });
