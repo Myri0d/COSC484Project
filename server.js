@@ -127,6 +127,7 @@ app.get("/contact.html", checkAuth, function(req, res)
   res.sendFile(__dirname + "/contact.html");
 });
 
+app.listen(port)
 
 //check if not registered; if not redirect to login
 function checkAuth(req, res, next){
