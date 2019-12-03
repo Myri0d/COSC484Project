@@ -5,6 +5,7 @@ if(process.env.NODE_ENV !== "production") {
 //import modeules
 var express = require("express");
 var mongoose = require("mongoose");
+var MongoClient = require('mongodb').MongoClient;
 var bcrypt = require("bcrypt");
 var http = require("http");
 var path = require("path");
@@ -42,11 +43,22 @@ const users = [];
 
 
 //DB connection
-mongoose.connect("mongodb://localhost:27017/", {useNewUrlParser: true});
+//mongoose.connect("mongodb://localhost:27017/", {useNewUrlParser: true});
 //mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true});
-var db = mongoose.connection;
-db.on("error", error => console.error(error));
-db.once("open", () => console.log("Connected to Mongoose!"));
+//var db = mongoose.connection;
+//db.on("error", error => console.error(error));
+//db.once("open", () => console.log("Connected to Mongoose!"));
+var url = process.env.MONGOLAB_URI;
+
+MongoClient.connect(url, function(err,db){
+    if (err) throw err;
+  
+    db.createCollection("users");
+    db.createCollection("amenities");
+    db.createCollection("Pay");
+    db.createCollection("maintenence");
+});
+
 
 
 //set up routes
