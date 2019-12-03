@@ -63,34 +63,34 @@ app.get('*', function(req, res)
 });
 var port = process.env.PORT || 3000;
 
-app.get("/",  function(req, res)
+app.get('*', function(req, res)
 {
-  res.sendFile(__dirname + "/index.html");
+  const about = path.join(__dirname, 'FrontEnd','about.html');
+  res.sendFile(about);
 });
 
-app.get("/", function(req, res)
+app.get('*', function(req, res)
 {
-  res.sendFile(__dirname + "/about.html");
+  const login = path.join(__dirname, 'FrontEnd','login.html');
+  res.sendFile(login);
 });
 
-app.get("/", checkNotAuth, function(req, res)
-{
-  res.sendFile(__dirname + "/login.html");
-});
 
-app.post("/login.html", checkNotAuth,  passport.authenticate("local", {
+
+app.post("FrontEnd/login.html", checkNotAuth,  passport.authenticate("local", {
   successRedirect: "/index.html",
   failureRedirect: "/login.html",
   failureFlash: true
 }));
 
 
-app.get("/", checkNotAuth, function(req, res)
+app.get('*', function(req, res)
 {
-  res.sendFile(__dirname + "/signup.html");
+  const signup = path.join(__dirname, 'FrontEnd','signup.html');
+  res.sendFile(signup);
 });
 
-app.post("/signup.html", checkNotAuth,  async (req, res) =>
+app.post("/FrontEnd/signup.html", checkNotAuth,  async (req, res) =>
 {
   try{
 
@@ -109,19 +109,22 @@ app.post("/signup.html", checkNotAuth,  async (req, res) =>
   console.log(users);
 });
 
-app.get("/Maintenance_Page.html", checkAuth, function(req, res)
+app.get('*', function(req, res)
 {
-  res.sendFile(__dirname + "/Maintenance_Page.html");
+  const maint = path.join(__dirname, 'FrontEnd','Maintenance_Page.html');
+  res.sendFile(maint);
 });
 
-app.get("/payment.html", checkAuth, function(req, res)
+app.get('*', function(req, res)
 {
-  res.sendFile(__dirname + "/payment.html");
+  const payment = path.join(__dirname, 'FrontEnd','payment.html');
+  res.sendFile(payment);
 });
 
-app.get("/contact.html", checkAuth, function(req, res)
+app.get('*', function(req, res)
 {
-  res.sendFile(__dirname + "/contact.html");
+  const contact = path.join(__dirname, 'FrontEnd','contact.html');
+  res.sendFile(contact);
 });
 
 app.listen(port, () => {
