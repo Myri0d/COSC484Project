@@ -126,14 +126,14 @@ app.get("/contact.html", checkAuth, function(req, res)
 app.listen(port, () => {
   const client = new MongoClient(uri, { useNewUrlParser: true });
     client.connect((error, client) => {
-        if(err) {
+        if(error) {
             throw error;
         }
 
             database = client.db(DATABASE_NAME);
             database.createCollection("payments", function(err,res) {
               if (err) {
-                throw error
+                throw err;
               }
               console.log("payment collection created")
             });
