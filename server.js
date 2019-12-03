@@ -48,7 +48,7 @@ const users = [];
 //var db = mongoose.connection;
 //db.on("error", error => console.error(error));
 //db.once("open", () => console.log("Connected to Mongoose!"));
-var url = process.env.MONGOLAB_URI;
+var url = encodeURI(process.env.MONGOLAB_URI);
 
 MongoClient.connect(url, function(err,db){
     if (err) throw err;
