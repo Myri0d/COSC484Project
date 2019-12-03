@@ -1,6 +1,4 @@
-if(process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
+
 
 //import modeules
 var express = require("express");
