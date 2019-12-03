@@ -18,6 +18,8 @@ MongoClient.connect(url, function(err,db){
         if(err) throw err;
     dbProject.collection("maintenence").insert(category, function(err,res){
         if(err) throw err;
+    dbProject.collection("maintenence").insert(location, function(err,res){
+        if(err) throw err;
     dbProject.collection("maintenence").insert(full_descript, function(err,res){
         if(err) throw err;
     dbProject.collection("maintenence").insert(access, function(err,res){
