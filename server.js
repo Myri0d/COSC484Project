@@ -131,7 +131,12 @@ app.listen(port, () => {
         }
 
             database = client.db(DATABASE_NAME);
-            database.createCollection("payments");
+            database.createCollection("payments", function(err,res) {
+              if (err) {
+                throw error
+              }
+              console.log("payment collection created")
+            });
             client.close();
   });
 });
