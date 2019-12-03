@@ -1,6 +1,6 @@
 var app = require('express')();
 var server = require('http').Server(app);
-server.listen(80);
+server.listen(8080);
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/FrontEnd/non_public_files/Index.html');
