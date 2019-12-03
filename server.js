@@ -49,11 +49,12 @@ const users = [];
 //db.on("error", error => console.error(error));
 //db.once("open", () => console.log("Connected to Mongoose!"));
 const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/test?retryWrites=true&w=majority");
+const DATABASE_NAME = "projectdb";
 
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
-  client.db("projectdb").createCollection("users");
-  // perform actions on the collection object
+  database = client.db(DATABASE_NAME);
+  collection = database.collection("users");
   client.close();
 });
 
