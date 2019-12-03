@@ -3,7 +3,7 @@ var server = require('http').Server(app);
 server.listen(8080);
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/FrontEnd/public/index.html');
+  res.sendfile(__dirname + '/FrontEnd/public/');
 });
 console.log('Express server started on port %s', server.address().port);
 var port = process.env.PORT || 3000;
