@@ -16,7 +16,13 @@
     "express":"*",
     "mongoose":"*",
     "bcrypt":"*",
-    "passport":"*"
+    "passport":"*",
+    "http":"*",
+    "path":"*",
+    "express-flash":"*",
+    "express-session":"*",
+    "passport-config":"*",
+    "method-override":"*"
   },
   "keywords": [
     "heroku",
