@@ -27,7 +27,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')))
 app.use("/css",  express.static(path.join(__dirname, 'css')));
 app.use(flash());
 app.use(session({
-  {secret: "bigOlSecret", name: "Cookie_name", cookie: {maxAge:7 * 24 * 3600 * 1000}, proxy: true, resave: true, saveUninitialized: true },
+  secret: "bigOlSecret",
   resave: false,
   saveUninitialized: false
 }));
@@ -46,11 +46,11 @@ app.use(methodOverride("_method"));
 
 mongoose.connect("mongodb+srv://user:coolkid123!@cluster0-0qbgb.mongodb.net/projectDB?retryWrites=true&w=majority", {useNewUrlParser: true});
 
-//const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/test?retryWrites=true&w=majority");
-//const DATABASE_NAME = "projectdb";
-var db = mongoose.connection;
-db.on("error", error => console.error(error));
-db.once("open", () => console.log("Connected to Mongoose!"));
+const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/test?retryWrites=true&w=majority");
+const DATABASE_NAME = "projectdb";
+//var db = mongoose.connection;
+//db.on("error", error => console.error(error));
+//db.once("open", () => console.log("Connected to Mongoose!"));
 
 
 
