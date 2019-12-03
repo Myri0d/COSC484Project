@@ -4,6 +4,11 @@ var url = "mongodb://localhost:3000/";
 MongoClient.connect(url, function(err,db){
     if (err) throw err;
     var dbProject = db.db("projectDB");
+    var prority = document.getElementById("ph");
+    var category = document.getElementById("ph");
+    var location = document.getElementById("ph");
+    var full_descript = document.getElementById("ph");
+    var location = document.getElementById("ph");
     dbProject.createCollection("priority");
     dbProject.collection("priority").insert(dbProject, function(err,res){
         if(err) throw err;
