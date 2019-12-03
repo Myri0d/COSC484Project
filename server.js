@@ -58,7 +58,7 @@ const DATABASE_NAME = "projectdb";
 //set up routes
 app.get("/", function(req, res)
 {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "FrontEnd/index.html");
 });
 var port = process.env.PORT || 3000;
 
