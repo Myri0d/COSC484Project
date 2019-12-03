@@ -1,0 +1,23 @@
+{
+  "name": "cosc484project",
+  "version": "1.0.0",
+  "description": "Software Site Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Myri0d/COSC484Project.git"
+  },
+  "keywords": [
+    "heroku",
+    "towson"
+  ],
+  "author": "Kareem Land",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Myri0d/COSC484Project/issues"
+  },
+  "homepage": "https://github.com/Myri0d/COSC484Project#readme"
+}
