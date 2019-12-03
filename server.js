@@ -126,7 +126,7 @@ app.get("/contact.html", checkAuth, function(req, res)
 app.listen(port, () => {
   const client = new MongoClient(uri, { useNewUrlParser: true });
     client.connect((error, client) => {
-        if(error) {
+        if(err) {
             throw error;
         }
 
