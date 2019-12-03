@@ -36,21 +36,20 @@ app.use(methodOverride("_method"));
 
 
 //temp users array; for local signins without server will resert everytime server is restarted
-const users = [];
-
-//var newuser = new User();
-//temp users array; for local signins without server will resert everytime server is restarted
+//const users = [];
 
 
 //DB connection
 //mongoose.connect("mongodb://localhost:27017/", {useNewUrlParser: true});
 //mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true});
-//var db = mongoose.connection;
-//db.on("error", error => console.error(error));
-//db.once("open", () => console.log("Connected to Mongoose!"));
-const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/test?retryWrites=true&w=majority");
-const DATABASE_NAME = "projectdb";
 
+mongoose.connect("mongodb+srv://user:coolkid123!@cluster0-0qbgb.mongodb.net/projectDB?retryWrites=true&w=majority", {useNewUrlParser: true});
+
+//const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/test?retryWrites=true&w=majority");
+//const DATABASE_NAME = "projectdb";
+var db = mongoose.connection;
+db.on("error", error => console.error(error));
+db.once("open", () => console.log("Connected to Mongoose!"));
 
 
 
@@ -167,6 +166,3 @@ app.delete("/logout", (req, res) =>{
   res.redirect("login.html");
 }
 );
-
-
-
