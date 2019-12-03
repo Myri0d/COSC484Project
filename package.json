@@ -11,6 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/Myri0d/COSC484Project.git"
   },
+  
+  "dependencies": {
+    `"express":"*",`
+    `"body-parser":"*",`
+    `"bcrypt": "^0.8.5"`
+  },
   "keywords": [
     "heroku",
     "towson"
