@@ -11,11 +11,13 @@ var path = require("path");
 var passport = require("passport");
 var flash = require("express-flash");
 var session = require("express-session");
-var initPassport = require("./passport-config");
+//var initPassport = require("./passport-config");
 //var User = require("../BackEnd/users");
 var methodOverride = require("method-override");
 var app = express();
-
+//server set up
+var server = require('http').Server(app);
+server.listen(8080);
 
 //libraries and files to use
 app.use(express.urlencoded({extended: false}));
@@ -134,11 +136,11 @@ function checkNotAuth(req, res, next){
 }
 
 //user verification
-initPassport(
-  passport,
-  email =>  users.find(user => user.email === email),
-  id => users.find(user => user.id === id)
-);
+//initPassport(
+  //passport,
+  //email =>  users.find(user => user.email === email),
+  //id => users.find(user => user.id === id)
+//);
 
 //allow logout
 app.delete("/logout", (req, res) =>{
@@ -148,6 +150,4 @@ app.delete("/logout", (req, res) =>{
 );
 
 
-//server set up
-var server = require('http').Server(app);
-server.listen(8080);
+
