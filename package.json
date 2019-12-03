@@ -21,7 +21,7 @@
     "path":"*",
     "express-flash":"*",
     "express-session":"*",
-    "passport-config":"*",
+    "./passport-config":"*",
     "method-override":"*"
   },
   "keywords": [
