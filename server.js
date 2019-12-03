@@ -52,7 +52,7 @@ const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/te
 
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
-  const collection = client.db("projectdb").collection("users");
+  client.db("projectdb").createCollection("users");
   // perform actions on the collection object
   client.close();
 });
