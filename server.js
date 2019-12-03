@@ -131,7 +131,7 @@ app.listen(port, () => {
         }
 
             database = client.db(DATABASE_NAME);
-            collection = database.collection("users");
+            database.createCollection("users");
             client.close();
   });
 });
