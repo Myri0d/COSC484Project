@@ -27,7 +27,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')))
 app.use("/css",  express.static(path.join(__dirname, 'css')));
 app.use(flash());
 app.use(session({
-  secret: "bigolSecret",
+  {secret: "bigOlSecret", name: "Cookie_name", cookie: {maxAge:7 * 24 * 3600 * 1000}, proxy: true, resave: true, saveUninitialized: true },
   resave: false,
   saveUninitialized: false
 }));
