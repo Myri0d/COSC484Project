@@ -137,7 +137,7 @@ app.listen(port, () => {
               }
               console.log("payment collection created")
             });
-            client.close();
+            
   });
 });
 
