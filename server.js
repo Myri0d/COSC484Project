@@ -14,7 +14,7 @@ var session = require("express-session");
 //var initPassport = require("./passport-config");
 //var User = require("../BackEnd/users");
 var methodOverride = require("method-override");
-var app = express();
+var app = require('express')();
 //server set up
 var server = require('http').Server(app);
 server.listen(8080);
