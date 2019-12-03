@@ -26,6 +26,7 @@
     "express-flash":"*",
     "express-session":"*",
     "method-override":"*",
+    "dotenv":"*",
     "mongodb":"*" 
   },
   "keywords": [
