@@ -58,21 +58,21 @@ const DATABASE_NAME = "projectdb";
 //set up routes
 app.get("/", function(req, res)
 {
-  res.sendFile(__dirname + "FrontEnd/index.html");
+  res.sendFile(__dirname + "FrontEnd/");
 });
 var port = process.env.PORT || 3000;
 
-app.get("/index.html",  function(req, res)
+app.get("/",  function(req, res)
 {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/about.html", function(req, res)
+app.get("/", function(req, res)
 {
   res.sendFile(__dirname + "/about.html");
 });
 
-app.get("/login.html", checkNotAuth, function(req, res)
+app.get("/", checkNotAuth, function(req, res)
 {
   res.sendFile(__dirname + "/login.html");
 });
@@ -84,7 +84,7 @@ app.post("/login.html", checkNotAuth,  passport.authenticate("local", {
 }));
 
 
-app.get("/signup.html", checkNotAuth, function(req, res)
+app.get("/", checkNotAuth, function(req, res)
 {
   res.sendFile(__dirname + "/signup.html");
 });
