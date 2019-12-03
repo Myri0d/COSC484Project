@@ -15,7 +15,8 @@
   "dependencies": {
     "express":"*",
     "mongoose":"*",
-    "bcrypt":"*"
+    "bcrypt":"*",
+    "passport":"*"
   },
   "keywords": [
     "heroku",
