@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm build",
-    "clean": "rm -rf node_modules",
-    "reinstall": "npm run clean && npm install",
+    "clean": "rm -rf node_modules", 
+    "reinstall": "npm run clean && npm install", 
     "rebuild": "npm run clean && npm install && npm run build",
     "start": "node server.js"
   },
@@ -15,8 +15,18 @@
     "type": "git",
     "url": "git+https://github.com/Myri0d/COSC484Project.git"
   },
+  
   "dependencies": {
-    "express": "^4.17.1"
+    "express":"*",
+    "mongoose":"*",
+    "bcrypt":"*",
+    "passport":"*",
+    "http":"*",
+    "path":"*",
+    "express-flash":"*",
+    "express-session":"*",
+    "method-override":"*",
+    "mongodb":"*" 
   },
   "keywords": [
     "heroku",
@@ -27,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/Myri0d/COSC484Project/issues"
   },
-  "homepage": "https://github.com/Myri0d/COSC484Project#readme"
+  "homepage": "https://github.com/Myri0d/COSC484Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
