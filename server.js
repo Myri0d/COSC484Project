@@ -48,15 +48,13 @@ const users = [];
 //var db = mongoose.connection;
 //db.on("error", error => console.error(error));
 //db.once("open", () => console.log("Connected to Mongoose!"));
-var url = encodeURI(process.env.MONGOLAB_URI);
+const uri = encodeURI("mongodb+srv://kland:cosc484@cluster0-zjw4j.mongodb.net/test?retryWrites=true&w=majority");
 
-MongoClient.connect(url, function(err,db){
-    if (err) throw err;
-  
-    db.createCollection("users");
-    db.createCollection("amenities");
-    db.createCollection("Pay");
-    db.createCollection("maintenence");
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("projectdb").collection("users");
+  // perform actions on the collection object
+  client.close();
 });
 
 
