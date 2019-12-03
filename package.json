@@ -1,0 +1,44 @@
+{
+  "name": "cosc484project",
+  "version": "1.0.0",
+  "description": "Software Site Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm build",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Myri0d/COSC484Project.git"
+  },
+
+  "dependencies": {
+    "express":"*",
+    "mongoose":"*",
+    "bcrypt":"*",
+    "passport":"*",
+    "http":"*",
+    "path":"*",
+    "express-flash":"*",
+    "express-session":"*",
+    "method-override":"*",
+    "mongodb":"*"
+  },
+  "keywords": [
+    "heroku",
+    "towson"
+  ],
+  "author": "Kareem Land",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Myri0d/COSC484Project/issues"
+  },
+  "engines":{
+    "node": "12.10.0"
+  },
+  "homepage": "https://github.com/Myri0d/COSC484Project#readme"
+}

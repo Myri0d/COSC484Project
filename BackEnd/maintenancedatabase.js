@@ -1,33 +1,30 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:3000/";
 
+
 MongoClient.connect(url, function(err,db){
     if (err) throw err;
     var dbProject = db.db("projectDB");
-    var prority = document.getElementById("ph");
-    var category = document.getElementById("ph");
-    var location = document.getElementById("ph");
-    var full_descript = document.getElementById("ph");
-    var location = document.getElementById("ph");
-    dbProject.createCollection("priority");
-    dbProject.collection("priority").insert(dbProject, function(err,res){
-        if(err) throw err;
-    });
-    dbProject.createCollection("category");
-    dbProject.collection("category").insert(dbProject, function(err,res){
-        if(err) throw err;
-    });
-    dbProject.createCollection("location");
-    dbProject.collection("location").insert(dbProject, function(err,res){
-        if(err) throw err;
-    });
-    dbProject.createCollection("full_description");
-    dbProject.collection("full_description").insert(dbProject, function(err,res){
-        if(err) throw err;
-    });
-    dbProject.createCollection("access_instructions");
-    dbProject.collection("access_instructions").insert(dbProject, function(err,res){
-        if(err) throw err;
-    });
+    var priority = document.getElementById("pr");
+    var category = document.getElementById("cat");
+    var location = document.getElementById("loc");
+    var full_descript = document.getElementById("textArea1");
+    var access = document.getElementById("textArea2");
 
+    dbProject.createCollection("maintenence");
+    dbProject.collection("maintenence").insert(dbProject, function(err,res){
+        if(err) throw err;
+    dbProject.collection("maintenence").insert(priority, function(err,res){
+        if(err) throw err;
+    dbProject.collection("maintenence").insert(category, function(err,res){
+        if(err) throw err;
+    dbProject.collection("maintenence").insert(full_descript, function(err,res){
+        if(err) throw err;
+    dbProject.collection("maintenence").insert(access, function(err,res){
+        if(err) throw err;
+});
+});
+});
+});
+});
 });
