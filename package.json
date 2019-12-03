@@ -21,7 +21,8 @@
     "path":"*",
     "express-flash":"*",
     "express-session":"*",
-    "method-override":"*"
+    "method-override":"*",
+    "mongodb":"*"
   },
   "keywords": [
     "heroku",
