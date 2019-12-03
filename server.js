@@ -24,6 +24,7 @@ server.listen(8080);
 app.use(express.urlencoded({extended: false}));
 app.use('/images', express.static(path.join(__dirname, 'images')))
 app.use("/css",  express.static(path.join(__dirname, 'css')));
+app.use(express.cookieParser(12223334433445454));
 app.use(flash());
 app.use(session({
   secret: process.env.SESSION_SECRET,
