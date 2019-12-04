@@ -116,11 +116,7 @@ app.post("/signup.html", checkNotAuth,  async (req, res) =>
   console.log(users);
 });
 
-app.get('FrontEnd/login.html', function(req, res)
-{
-  const maint = path.join(__dirname, 'Maintenance_Page.html');
-  res.sendFile(maint);
-});
+
 
 app.get('*', function(req, res)
 {
