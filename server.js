@@ -109,7 +109,7 @@ app.post("/FrontEnd/signup.html", checkNotAuth,  async (req, res) =>
   console.log(users);
 });
 
-app.get('*', function(req, res)
+app.get('FrontEnd/login.html', function(req, res)
 {
   const maint = path.join(__dirname, 'FrontEnd','Maintenance_Page.html');
   res.sendFile(maint);
