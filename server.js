@@ -22,8 +22,8 @@ server.listen(8080);
 
 //libraries and files to use
 app.use(express.urlencoded({extended: false}));
-app.use('/images', express.static(path.join(__dirname, 'FrontEnd','images')))
-app.use("/css",  express.static(path.join(__dirname, 'FrontEnd','css')));
+app.use('/images', express.static(path.join(__dirname,'images')))
+app.use("/css",  express.static(path.join(__dirname,'css')));
 app.use(flash());
 app.use(session({
   secret: "bigolsecret",
@@ -58,33 +58,33 @@ const DATABASE_NAME = "projectdb";
 //set up routes
 function redirectAbout(){
   app.get('*', function(req, res) {
-    const about = path.join(__dirname, 'FrontEnd','about.html');
+    const about = path.join(__dirname, 'about.html');
     res.redirect(about);
 });
 }
 
 app.get('*', function(req, res)
 {
-  const index = path.join(__dirname, 'FrontEnd','index.html');
+  const index = path.join(__dirname, 'index.html');
   res.sendFile(index);
 });
 var port = process.env.PORT || 3000;
 
 app.get('*', function(req, res)
 {
-  const about = path.join(__dirname, 'FrontEnd','about.html');
+  const about = path.join(__dirname, 'about.html');
   res.sendFile(about);
 });
 
 app.get('*', function(req, res)
 {
-  const login = path.join(__dirname, 'FrontEnd','login.html');
+  const login = path.join(__dirname,'login.html');
   res.sendFile(login);
 });
 
 
 
-app.post("FrontEnd/login.html", checkNotAuth,  passport.authenticate("local", {
+app.post("login.html", checkNotAuth,  passport.authenticate("local", {
   successRedirect: "/index.html",
   failureRedirect: "/login.html",
   failureFlash: true
@@ -93,11 +93,11 @@ app.post("FrontEnd/login.html", checkNotAuth,  passport.authenticate("local", {
 
 app.get('*', function(req, res)
 {
-  const signup = path.join(__dirname, 'FrontEnd','signup.html');
+  const signup = path.join(__dirname,'signup.html');
   res.sendFile(signup);
 });
 
-app.post("/FrontEnd/signup.html", checkNotAuth,  async (req, res) =>
+app.post("/signup.html", checkNotAuth,  async (req, res) =>
 {
   try{
 
@@ -118,19 +118,19 @@ app.post("/FrontEnd/signup.html", checkNotAuth,  async (req, res) =>
 
 app.get('FrontEnd/login.html', function(req, res)
 {
-  const maint = path.join(__dirname, 'FrontEnd','Maintenance_Page.html');
+  const maint = path.join(__dirname, 'Maintenance_Page.html');
   res.sendFile(maint);
 });
 
 app.get('*', function(req, res)
 {
-  const payment = path.join(__dirname, 'FrontEnd','payment.html');
+  const payment = path.join(__dirname, 'payment.html');
   res.sendFile(payment);
 });
 
 app.get('*', function(req, res)
 {
-  const contact = path.join(__dirname, 'FrontEnd','contact.html');
+  const contact = path.join(__dirname, 'contact.html');
   res.sendFile(contact);
 });
 
