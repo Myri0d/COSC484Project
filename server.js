@@ -56,9 +56,12 @@ const DATABASE_NAME = "projectdb";
 
 
 //set up routes
-app.get('*', function(req, res) {
-    res.redirect('/');
+function redirectAbout(){
+  app.get('*', function(req, res) {
+    const about = path.join(__dirname, 'FrontEnd','about.html');
+    res.redirect(about);
 });
+}
 
 app.get('*', function(req, res)
 {
